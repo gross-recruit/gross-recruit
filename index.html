@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>株式会社GROSS｜採用情報</title>
+  <meta name="description" content="千葉県木更津市の株式会社GROSSでは、プラント配管・配管溶接スタッフを募集しています。未経験者・経験者ともに歓迎。">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont,
+        "Helvetica Neue", "Hiragino Kaku Gothic ProN",
+        "Hiragino Sans", Meiryo, sans-serif;
+      color: #222;
+      line-height: 1.8;
+      background: #f7f7f7;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    /* ヘッダー */
+    header {
+      background: #111;
+      color: #fff;
+      padding: 15px 20px;
+    }
+
+    .header-inner {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .header-tel {
+      color: #fff;
+      font-size: 14px;
+    }
+
+    /* メインビジュアル */
+    .hero {
+      background:
+        linear-gradient(rgba(0, 0, 0, 0.65),
+        rgba(0, 0, 0, 0.65)),
+        url("https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1600&q=80");
+      background-size: cover;
+      background-position: center;
+      min-height: 620px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+      padding: 40px 20px;
+    }
+
+    .hero-content {
+      max-width: 900px;
+    }
+
+    .hero h1 {
+      font-size: clamp(34px, 6vw, 70px);
+      line-height: 1.3;
+      margin-bottom: 25px;
+      font-weight: 800;
+    }
+
+    .hero p {
+      font-size: clamp(16px, 2vw, 21px);
+      margin-bottom: 35px;
+    }
+
+    /* ボタン */
+    .btn {
+      display: inline-block;
+      padding: 16px 30px;
+      border-radius: 6px;
+      font-size: 18px;
+      font-weight: bold;
+      margin: 8px;
+    }
+
+    .btn-line {
+      background: #06c755;
+      color: #fff;
+    }
+
+    .btn-phone {
+      background: #fff;
+      color: #111;
+    }
+
+    /* 共通 */
+    section {
+      padding: 80px 20px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 45px;
+      font-weight: bold;
+    }
+
+    .section-title::after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 3px;
+      background: #06c755;
+      margin: 15px auto 0;
+    }
+
+    /* メッセージ */
+    .message {
+      background: #fff;
+    }
+
+    .message-box {
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+      font-size: 18px;
+    }
+
+    /* 仕事内容 */
+    .work-grid {
+      display: grid;
+      grid-template-columns:
+        repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .work-card {
+      background: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+    }
+
+    .work-card h3 {
+      margin-bottom: 15px;
+      font-size: 21px;
+    }
+
+    /* 募集要項 */
+    .recruit {
+      background: #fff;
+    }
+
+    .recruit-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .recruit-table th,
+    .recruit-table td {
+      padding: 18px;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+
+    .recruit-table th {
+      width: 30%;
+      background: #f2f2f2;
+    }
+
+    /* 福利厚生 */
+    .benefits {
+      list-style: none;
+      max-width: 750px;
+      margin: auto;
+      background: #fff;
+      border-radius: 8px;
+      padding: 20px;
+    }
+
+    .benefits li {
+      padding: 15px;
+      border-bottom: 1px solid #eee;
+      font-size: 17px;
+    }
+
+    .benefits li:last-child {
+      border-bottom: none;
+    }
+
+    /* 応募 */
+    .contact {
+      background: #111;
+      color: #fff;
+      text-align: center;
+    }
+
+    .contact-box {
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .contact-tel {
+      color: #fff;
+      font-size: 32px;
+      font-weight: bold;
+      display: block;
+      margin: 20px 0;
+    }
+
+    .contact-note {
+      font-size: 14px;
+      margin: 20px auto;
+      color: #ddd;
+    }
+
+    footer {
+      background: #000;
+      color: #aaa;
+      text-align: center;
+      padding: 25px 20px;
+      font-size: 13px;
+    }
+
+    /* スマホ対応 */
+    @media (max-width: 600px) {
+      .header-inner {
+        flex-direction: column;
+        gap: 5px;
+      }
+
+      .hero {
+        min-height: 580px;
+      }
+
+      section {
+        padding: 60px 15px;
+      }
+
+      .section-title {
+        font-size: 27px;
+      }
+
+      .btn {
+        display: block;
+        width: 100%;
+        margin: 10px 0;
+      }
+
+      .recruit-table th,
+      .recruit-table td {
+        display: block;
+        width: 100%;
+      }
+
+      .recruit-table th {
+        padding-bottom: 8px;
+      }
+
+      .recruit-table td {
+        border-top: none;
+        padding-top: 8px;
+      }
+
+      .contact-tel {
+        font-size: 26px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="logo">株式会社GROSS｜採用情報</div>
+    <a href="tel:08078564398" class="header-tel">
+      TEL：080-7856-4398
+    </a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>
+      配管・溶接の技術を、<br>
+      ここから身につける。
+    </h1>
+
+    <p>
+      未経験からでも、一生モノの技術を。<br>
+      経験者は、あなたの経験と資格をしっかり評価します。
+    </p>
+
+    <a href="https://lin.ee/nwXnHGm"
+       target="_blank"
+       class="btn btn-line">
+      LINEで応募・お問い合わせ
+    </a>
+
+    <a href="tel:08078564398"
+       class="btn btn-phone">
+      電話で応募する
+    </a>
+  </div>
+</section>
+
+<section class="message">
+  <div class="container">
+    <h2 class="section-title">
+      一緒に働く仲間を募集しています
+    </h2>
+
+    <div class="message-box">
+      <p>
+        株式会社GROSSでは、プラント配管・配管溶接を中心に、
+        さまざまな現場で施工を行っています。
+      </p>
+
+      <br>
+
+      <p>
+        「溶接の仕事に興味がある」<br>
+        「手に職をつけたい」<br>
+        「今までの経験を活かして、さらに成長したい」
+      </p>
+
+      <br>
+
+      <p>
+        そんな方を歓迎します。<br>
+        未経験の方には、仕事を覚えるところから丁寧にサポート。
+        経験者の方には、経験や資格をしっかり給与に反映します。
+      </p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2 class="section-title">仕事内容</h2>
+
+    <div class="work-grid">
+
+      <div class="work-card">
+        <h3>プラント配管工事</h3>
+        <p>
+          プラント設備を中心とした配管工事を行います。
+          現場での作業がメインです。
+        </p>
+      </div>
+
+      <div class="work-card">
+        <h3>配管溶接</h3>
+        <p>
+          配管の施工に伴う溶接作業を行います。
+          経験やスキルを活かして働ける仕事です。
+        </p>
+      </div>
+
+      <div class="work-card">
+        <h3>一般溶接作業</h3>
+        <p>
+          プラント関連だけでなく、
+          一般的な溶接作業にも対応しています。
+        </p>
+      </div>
+
+    </div>
+
+    <div style="text-align:center; margin-top:40px;">
+      <h3 style="font-size:22px; margin-bottom:15px;">
+        対応する主な溶接
+      </h3>
+
+      <p style="font-size:18px;">
+        TIG溶接 ／ アーク溶接 ／ 半自動溶接
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="recruit">
+  <div class="container">
+    <h2 class="section-title">募集要項</h2>
+
+    <table class="recruit-table">
+      <tr>
+        <th>募集職種</th>
+        <td>配管工・溶接工</td>
+      </tr>
+
+      <tr>
+        <th>雇用形態</th>
+        <td>正社員</td>
+      </tr>
+
+      <tr>
+        <th>応募資格</th>
+        <td>未経験者・経験者ともに歓迎</td>
+      </tr>
+
+      <tr>
+        <th>給与</th>
+        <td>
+          日給13,000円～<br>
+          ※資格・経験を考慮し、給与に反映します。
+        </td>
+      </tr>
+
+      <tr>
+        <th>勤務時間</th>
+        <td>
+          8:00～17:00<br>
+          休憩2時間／残業少なめ
+        </td>
+      </tr>
+
+      <tr>
+        <th>休日</th>
+        <td>土日祝、GW、お盆、年末年始</td>
+      </tr>
+
+      <tr>
+        <th>勤務地</th>
+        <td>
+          千葉県木更津市を中心とした各現場<br>
+          ※現場での作業がメインです。
+        </td>
+      </tr>
+
+      <tr>
+        <th>試用期間</th>
+        <td>2ヶ月</td>
+      </tr>
+    </table>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2 class="section-title">待遇・福利厚生</h2>
+
+    <ul class="benefits">
+      <li>✓ 社会保険完備</li>
+      <li>✓ 昇給あり</li>
+      <li>✓ 資格取得支援あり</li>
+      <li>✓ 出張手当・各種手当あり</li>
+      <li>✓ マイカー通勤可</li>
+      <li>✓ 通勤手当あり</li>
+    </ul>
+  </div>
+</section>
+
+<section class="contact">
+  <div class="container">
+    <h2 class="section-title">応募・お問い合わせ</h2>
+
+    <div class="contact-box">
+
+      <p>
+        少しでも興味を持っていただけた方は、<br>
+        お気軽にお問い合わせください。
+      </p>
+
+      <a href="https://lin.ee/nwXnHGm"
+         target="_blank"
+         class="btn btn-line">
+        LINEで応募・お問い合わせ
+      </a>
+
+      <p style="margin-top:25px;">
+        お電話でのお問い合わせはこちら
+      </p>
+
+      <a href="tel:08078564398"
+         class="contact-tel">
+        080-7856-4398
+      </a>
+
+      <p class="contact-note">
+        電話に出られない場合があります。<br>
+        その際は、留守番電話に「お名前」と
+        「お問い合わせ内容」を必ず残してください。<br>
+        確認後、折り返しご連絡いたします。
+      </p>
+
+      <a href="tel:08078564398"
+         class="btn btn-phone">
+        電話で応募する
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 株式会社GROSS All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
